@@ -1,4 +1,4 @@
-var file = "url.txt";
+var file = "//cdn.jsdelivr.net/gh/mooncero/banner@main/url.txt";
 $.get(file,function(txt) {
 
     // Split data and convert it into array
