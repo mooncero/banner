@@ -6,7 +6,7 @@
       
       // load the trivia from the server
       $.ajax({
-        url: 'url.txt'
+        url: 'https://cdn.jsdelivr.net/gh/mooncero/banner@main/url.txt'
       }).done(function(content) {
         
         // normalize the line breaks, then split into lines
