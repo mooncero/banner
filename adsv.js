@@ -6,7 +6,7 @@
       
       // load the trivia from the server
       $.ajax({
-        url: 'trivia.txt'
+        url: 'url.txt'
       }).done(function(content) {
         
         // normalize the line breaks, then split into lines
