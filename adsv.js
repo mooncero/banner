@@ -1,5 +1,13 @@
-$.get('//cdn.jsdelivr.net/gh/mooncero/banner@main/url.txt', function(txt) {
-var lines = txt.responseText.split("\n");
-var randLineNum = Math.floor(Math.random() * lines.length);
-return lines[randLineNum]; // random line from the text file
+$.ajax({
+  url: '//cdn.jsdelivr.net/gh/mooncero/banner@main/url.txt',
+  success: function(text) {
+    var fileList = text.split('\n');
+    var randomIndex = randomInt(0, fileList.length - 1);    
+
+    $('iframe').attr('src', fileList[randomIndex]);
+  }
 });
+
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
